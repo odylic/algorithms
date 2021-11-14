@@ -55,7 +55,8 @@ const linkedListRecursed = (head) => {
   let end = linkedListRecursed(current.next);
   return end;
 };
-// console.log(linkedListRecursed(a));
+
+console.log(linkedListRecursed(a));
 
 // const reverseLinkedList = (head) => {
 //   // create a stack with all the values in the linked list
