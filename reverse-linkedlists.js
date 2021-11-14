@@ -82,7 +82,7 @@ console.log(linkedListRecursed(a));
 // };
 
 const reverseLinkedList = (head) => {
-  
+  // initialize stack array
   const stack = [];
   while (head) {
     stack.push(head.value);
