@@ -114,10 +114,14 @@ const reverseLinkedList = (head) => {
   const newHead = new Node(stack.pop());
   // reassign current as newHead
   let current = newHead;
+  // while stack still has elements
   while (stack.length) {
+    // current.next is the new Node with the value of the last in linked list popped off
     current.next = new Node(stack.pop());
+    // current is reassigned to the current.next
     current = current.next;
   }
+  // return the newHead
   return newHead;
 };
 
