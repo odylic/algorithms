@@ -23,16 +23,16 @@ function Node(value) {
  *
  */
 
-// create a linked list
-const a = new Node("1");
-const b = new Node("2");
-const c = new Node("3");
-const d = new Node("4");
-const e = new Node("5");
-a.next = b;
-b.next = c;
-c.next = d;
-d.next = e;
+// // create a linked list
+// const a = new Node("1");
+// const b = new Node("2");
+// const c = new Node("3");
+// const d = new Node("4");
+// const e = new Node("5");
+// a.next = b;
+// b.next = c;
+// c.next = d;
+// d.next = e;
 
 // way to show linked list
 const linkedList = (head) => {
@@ -86,7 +86,7 @@ const reverseLinkedList = (head) => {
   const stack = [];
   // while head is defined
   while (head) {
-    // 
+    // push the value into the stack
     stack.push(head.value);
     head = head.next;
   }
