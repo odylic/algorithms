@@ -22,6 +22,8 @@ function Node(value) {
  * Do it in place
  *
  */
+
+// create a linked list
 const a = new Node("1");
 const b = new Node("2");
 const c = new Node("3");
@@ -33,6 +35,7 @@ c.next = d;
 d.next = e;
 
 const linkedList = (head) => {
+  // initialize an array as the stack
   const stack = [];
 
   while (head) {
@@ -42,7 +45,7 @@ const linkedList = (head) => {
   return stack;
 };
 
-console.log(linkedList(a));
+// console.log(linkedList(a));
 
 const linkedListRecursed = (head) => {
   // base case
@@ -54,20 +57,35 @@ const linkedListRecursed = (head) => {
 };
 // console.log(linkedListRecursed(a));
 
+// const reverseLinkedList = (head) => {
+//   // create a stack with all the values in the linked list
+//   const stack = [];
+//   // traverse linked list and push values into stack
+//   while (head) {
+//     stack.push(head.value);
+//     head = head.next;
+//   }
+//   // create a new head with the last element as the value
+//   const newHead = new Node(stack.pop());
+//   // console.log(newHead)
+
+//   let current = newHead;
+//   // once the length is 0, condition will evaluate to false which will break out of the loop
+//   while (stack.length) {
+//     current.next = new Node(stack.pop());
+//     current = current.next;
+//   }
+//   return newHead;
+// };
+
 const reverseLinkedList = (head) => {
-  // create a stack with all the values in the linked list
   const stack = [];
-  // traverse linked list and push values into stack
   while (head) {
     stack.push(head.value);
     head = head.next;
   }
-  // create a new head with the last element as the value
   const newHead = new Node(stack.pop());
-  // console.log(newHead)
-
   let current = newHead;
-  // once the length is 0, condition will evaluate to false which will break out of the loop
   while (stack.length) {
     current.next = new Node(stack.pop());
     current = current.next;
@@ -75,7 +93,7 @@ const reverseLinkedList = (head) => {
   return newHead;
 };
 
-// console.log(reverseLinkedList(a));
+console.log(reverseLinkedList(a));
 
 module.exports = { Node, reverseLinkedList };
 
