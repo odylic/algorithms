@@ -81,6 +81,7 @@ const linkedListRecursed = (head) => {
 //   return newHead;
 // };
 
+// value is the number for each node and has a next value
 function Node(value) {
   this.value = value;
   this.next = null;
