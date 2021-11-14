@@ -1,7 +1,7 @@
-function Node(value) {
-  this.value = value;
-  this.next = null;
-}
+// function Node(value) {
+//   this.value = value;
+//   this.next = null;
+// }
 
 /**
  * Write a function for reversing a linked list.
@@ -80,6 +80,19 @@ console.log(linkedListRecursed(a));
 //   }
 //   return newHead;
 // };
+
+// create a linked list
+// the const is a,b,c,d,e
+// each Node's value is 1,2,3,4,5
+const a = new Node("1");
+const b = new Node("2");
+const c = new Node("3");
+const d = new Node("4");
+const e = new Node("5");
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
 
 const reverseLinkedList = (head) => {
   // initialize stack array
