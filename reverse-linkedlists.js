@@ -84,7 +84,9 @@ console.log(linkedListRecursed(a));
 const reverseLinkedList = (head) => {
   // initialize stack array
   const stack = [];
+  // while head is defined
   while (head) {
+    // 
     stack.push(head.value);
     head = head.next;
   }
