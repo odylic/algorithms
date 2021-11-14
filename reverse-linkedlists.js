@@ -107,8 +107,10 @@ const reverseLinkedList = (head) => {
   while (head) {
     // push the value into the stack
     stack.push(head.value);
+    // head is reassigned as next
     head = head.next;
   }
+  // declare newHead as a new Node
   const newHead = new Node(stack.pop());
   let current = newHead;
   while (stack.length) {
