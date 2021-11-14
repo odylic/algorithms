@@ -1,0 +1,99 @@
+function Node(value) {
+  this.value = value;
+  this.next = null;
+}
+
+/**
+ * Write a function for reversing a linked list.
+ * Your function will have one input: the head of the list
+ * Your function should return the new head of the list
+ * If the input is null, your function should return null
+ *
+ * Example:
+ * If the linked list is:
+ *
+ *      1 -> 2 -> 3 -> 4 -> 5
+ *
+ * The result should like like:
+ *
+ *      5 -> 4 -> 3 -> 2 -> 1
+ *
+ * Extension:
+ * Do it in place
+ *
+ */
+const a = new Node("1");
+const b = new Node("2");
+const c = new Node("3");
+const d = new Node("4");
+const e = new Node("5");
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
+
+const linkedList = (head) => {
+  const stack = [];
+
+  while (head) {
+    stack.push(head.value);
+    head = head.next;
+  }
+  return stack;
+};
+
+console.log(linkedList(a));
+
+const linkedListRecursed = (head) => {
+  // base case
+  if (!head || !head.next) return head;
+  let current = head;
+  let next = current.next;
+  let end = linkedListRecursed(current.next);
+  return end;
+};
+// console.log(linkedListRecursed(a));
+
+const reverseLinkedList = (head) => {
+  // create a stack with all the values in the linked list
+  const stack = [];
+  // traverse linked list and push values into stack
+  while (head) {
+    stack.push(head.value);
+    head = head.next;
+  }
+  // create a new head with the last element as the value
+  const newHead = new Node(stack.pop());
+  // console.log(newHead)
+
+  let current = newHead;
+  // once the length is 0, condition will evaluate to false which will break out of the loop
+  while (stack.length) {
+    current.next = new Node(stack.pop());
+    current = current.next;
+  }
+  return newHead;
+};
+
+// console.log(reverseLinkedList(a));
+
+module.exports = { Node, reverseLinkedList };
+
+// recursion
+const reverseLinkedListExt = (head) => {
+  // base case
+  if (!head || !head.next) return head;
+  // assign pointer variables
+  let current = head;
+  let next = current.next;
+  // use recursion with the next node to traverse to the end of the linked list
+  let end = reverseLinkedListExt(next);
+
+  // rearrange pointers, reverse the order of the nodes
+  current.next.next = current;
+  current.next = null;
+  // return end which is the new head
+  return end;
+};
+
+// console.log(reverseLinkedListExt(a));
