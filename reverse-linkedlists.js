@@ -34,6 +34,7 @@ b.next = c;
 c.next = d;
 d.next = e;
 
+// way to show linked list
 const linkedList = (head) => {
   // initialize an array as the stack
   const stack = [];
@@ -47,6 +48,7 @@ const linkedList = (head) => {
 
 // console.log(linkedList(a));
 
+// recursive expression to show linked list
 const linkedListRecursed = (head) => {
   // base case
   if (!head || !head.next) return head;
@@ -80,6 +82,7 @@ console.log(linkedListRecursed(a));
 // };
 
 const reverseLinkedList = (head) => {
+  
   const stack = [];
   while (head) {
     stack.push(head.value);
