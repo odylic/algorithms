@@ -58,7 +58,7 @@ const linkedListRecursed = (head) => {
   return end;
 };
 
-console.log(linkedListRecursed(a));
+// console.log(linkedListRecursed(a));
 
 // const reverseLinkedList = (head) => {
 //   // create a stack with all the values in the linked list
@@ -80,6 +80,11 @@ console.log(linkedListRecursed(a));
 //   }
 //   return newHead;
 // };
+
+function Node(value) {
+  this.value = value;
+  this.next = null;
+}
 
 // create a linked list
 // the const is a,b,c,d,e
