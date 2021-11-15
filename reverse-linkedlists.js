@@ -142,6 +142,7 @@ const reverseLinkedList = (head) => {
     // making the current the next one which is the last one popped
     current = current.next;
   }
+  // return the newHead which goes down the reversed stack from the current.next
   return newHead;
 };
 
