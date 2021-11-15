@@ -126,8 +126,8 @@ d.next = e;
 // };
 
 const reverseLinkedList = (head) => {
-  
-}
+  const stack = [];
+};
 
 console.log(reverseLinkedList(a));
 
