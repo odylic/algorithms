@@ -122,7 +122,7 @@ const reverseLinkedList = (head) => {
   return newHead;
 };
 
-console.log(reverseLinkedList(a));
+// console.log(reverseLinkedList(a));
 
 module.exports = { Node, reverseLinkedList };
 
