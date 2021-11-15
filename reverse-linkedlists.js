@@ -100,30 +100,6 @@ b.next = c;
 c.next = d;
 d.next = e;
 
-// const reverseLinkedList = (head) => {
-//   // initialize stack array
-//   const stack = [];
-//   // while head is defined
-//   while (head) {
-//     // push the value into the stack
-//     stack.push(head.value);
-//     // head is reassigned as next
-//     head = head.next;
-//   }
-//   // declare newHead as a new Node with the value of the last linked list popped off
-//   const newHead = new Node(stack.pop());
-//   // reassign current as newHead
-//   let current = newHead;
-//   // while stack still has elements, until then it will break out of the loop
-//   while (stack.length) {
-//     // current.next is the new Node with the value of the last in linked list popped off
-//     current.next = new Node(stack.pop());
-//     // current is reassigned to the current.next
-//     current = current.next;
-//   }
-//   // return the newHead
-//   return newHead;
-// };
 
 const reverseLinkedList = (head) => {
   const stack = [];
