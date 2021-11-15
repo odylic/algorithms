@@ -127,6 +127,10 @@ d.next = e;
 
 const reverseLinkedList = (head) => {
   const stack = [];
+  while (head) {
+    stack.push(head.value);
+    head = head.next;
+  }
 };
 
 console.log(reverseLinkedList(a));
