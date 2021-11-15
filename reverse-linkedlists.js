@@ -147,6 +147,9 @@ const reverseLinkedListExt = (head) => {
   if (!head || !head.next) return head;
   let current = head;
   let next = current.next;
+  let end = reverseLinkedListExt(next);
+
+  
 };
 
 console.log(reverseLinkedListExt(a));
