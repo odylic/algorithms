@@ -149,7 +149,9 @@ const reverseLinkedListExt = (head) => {
   let next = current.next;
   let end = reverseLinkedListExt(next);
 
-  
+  current.next.next = current;
+  current.next = null;
+  return end;
 };
 
 console.log(reverseLinkedListExt(a));
