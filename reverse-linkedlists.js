@@ -100,7 +100,6 @@ b.next = c;
 c.next = d;
 d.next = e;
 
-
 const reverseLinkedList = (head) => {
   const stack = [];
   // push into stack the value and reassign next to the head so it goes through the whole linked list, going regular
@@ -144,7 +143,7 @@ module.exports = { Node, reverseLinkedList };
 // };
 
 const reverseLinkedListExt = (head) => {
-  
-}
+  if (!head || !head.next) return head;
+};
 
 console.log(reverseLinkedListExt(a));
