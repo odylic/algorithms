@@ -87,18 +87,18 @@ function Node(value) {
   this.next = null;
 }
 
-// create a linked list
-// the const is a,b,c,d,e
-// each Node's value is 1,2,3,4,5
-const a = new Node("1");
-const b = new Node("2");
-const c = new Node("3");
-const d = new Node("4");
-const e = new Node("5");
-a.next = b;
-b.next = c;
-c.next = d;
-d.next = e;
+// // create a linked list
+// // the const is a,b,c,d,e
+// // each Node's value is 1,2,3,4,5
+// const a = new Node("1");
+// const b = new Node("2");
+// const c = new Node("3");
+// const d = new Node("4");
+// const e = new Node("5");
+// a.next = b;
+// b.next = c;
+// c.next = d;
+// d.next = e;
 
 const reverseLinkedList = (head) => {
   const stack = [];
@@ -142,13 +142,33 @@ module.exports = { Node, reverseLinkedList };
 //   return end;
 // };
 
+// create a linked list
+// the const is a,b,c,d,e
+// each Node's value is 1,2,3,4,5
+const a = new Node("1");
+const b = new Node("2");
+const c = new Node("3");
+const d = new Node("4");
+const e = new Node("5");
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
+
 // recursive solution, O(n) space (new stack frame added for each recursive call)
 const reverseLinkedListExt = (head) => {
+  // if head or head.next is undefined, return head, base case
   if (!head || !head.next) return head;
   let current = head;
   let next = current.next;
+  // initialized end as the evaluated result of the recursive expression with head.next as the input, so it goes all the way to the end of the linked list
   let end = reverseLinkedListExt(next);
 
+  // head = a
+  // current = a
+  // current.next = b
+  // current.next.next = c === a
+  // current.next = null
   current.next.next = current;
   current.next = null;
   return end;
