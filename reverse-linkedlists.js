@@ -127,20 +127,20 @@ const reverseLinkedList = (head) => {
 module.exports = { Node, reverseLinkedList };
 
 // recursion
-const reverseLinkedListExt = (head) => {
-  // base case
-  if (!head || !head.next) return head;
-  // assign pointer variables
-  let current = head;
-  let next = current.next;
-  // use recursion with the next node to traverse to the end of the linked list
-  let end = reverseLinkedListExt(next);
+// const reverseLinkedListExt = (head) => {
+//   // base case
+//   if (!head || !head.next) return head;
+//   // assign pointer variables
+//   let current = head;
+//   let next = current.next;
+//   // use recursion with the next node to traverse to the end of the linked list
+//   let end = reverseLinkedListExt(next);
 
-  // rearrange pointers, reverse the order of the nodes
-  current.next.next = current;
-  current.next = null;
-  // return end which is the new head
-  return end;
-};
+//   // rearrange pointers, reverse the order of the nodes
+//   current.next.next = current;
+//   current.next = null;
+//   // return end which is the new head
+//   return end;
+// };
 
 console.log(reverseLinkedListExt(a));
