@@ -145,6 +145,7 @@ module.exports = { Node, reverseLinkedList };
 // recursive solution, O(n) space (new stack frame added for each recursive call)
 const reverseLinkedListExt = (head) => {
   if (!head || !head.next) return head;
+  let current = head;
 };
 
 console.log(reverseLinkedListExt(a));
