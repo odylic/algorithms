@@ -132,7 +132,7 @@ const reverseLinkedList = (head) => {
     stack.push(head.value);
     head = head.next;
   }
-  
+  // newHead is the last in list, reversing
   const newHead = new Node(stack.pop());
 };
 
