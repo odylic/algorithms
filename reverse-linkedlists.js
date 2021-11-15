@@ -127,10 +127,13 @@ d.next = e;
 
 const reverseLinkedList = (head) => {
   const stack = [];
+  // push into stack the value and reassign next to the head so it goes through the whole linked list
   while (head) {
     stack.push(head.value);
     head = head.next;
   }
+  
+  const newHead = new Node(stack.pop());
 };
 
 console.log(reverseLinkedList(a));
