@@ -125,7 +125,7 @@ d.next = e;
 //   return newHead;
 // };
 
-
+const reverseLinkedList 
 
 console.log(reverseLinkedList(a));
 
