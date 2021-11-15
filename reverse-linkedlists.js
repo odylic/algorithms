@@ -125,7 +125,9 @@ d.next = e;
 //   return newHead;
 // };
 
-const reverseLinkedList 
+const reverseLinkedList = (head) => {
+  
+}
 
 console.log(reverseLinkedList(a));
 
