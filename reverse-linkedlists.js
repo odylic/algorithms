@@ -143,4 +143,8 @@ module.exports = { Node, reverseLinkedList };
 //   return end;
 // };
 
+const reverseLinkedListExt = (head) => {
+  
+}
+
 console.log(reverseLinkedListExt(a));
