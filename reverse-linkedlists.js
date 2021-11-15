@@ -127,7 +127,7 @@ d.next = e;
 
 const reverseLinkedList = (head) => {
   const stack = [];
-  // push into stack the value and reassign next to the head so it goes through the whole linked list
+  // push into stack the value and reassign next to the head so it goes through the whole linked list, going regular
   while (head) {
     stack.push(head.value);
     head = head.next;
@@ -135,9 +135,14 @@ const reverseLinkedList = (head) => {
   // newHead is the last in list, reversing
   const newHead = new Node(stack.pop());
   let current = newHead;
+
+  // reverses the stack, making the next the last one popped
   while (stack.length) {
     current.next = new Node(stack.pop());
+    // making the current the next one which is the last one popped
+    current = current.next;
   }
+  return newHead;
 };
 
 console.log(reverseLinkedList(a));
