@@ -146,6 +146,7 @@ module.exports = { Node, reverseLinkedList };
 const reverseLinkedListExt = (head) => {
   if (!head || !head.next) return head;
   let current = head;
+  let next = current.next;
 };
 
 console.log(reverseLinkedListExt(a));
