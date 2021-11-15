@@ -143,4 +143,4 @@ const reverseLinkedListExt = (head) => {
   return end;
 };
 
-// console.log(reverseLinkedListExt(a));
+console.log(reverseLinkedListExt(a));
