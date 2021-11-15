@@ -134,6 +134,7 @@ const reverseLinkedList = (head) => {
   }
   // newHead is the last in list, reversing
   const newHead = new Node(stack.pop());
+  let current = newHead;
 };
 
 console.log(reverseLinkedList(a));
