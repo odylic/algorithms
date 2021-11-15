@@ -164,14 +164,15 @@ const reverseLinkedListExt = (head) => {
   // initialized end as the evaluated result of the recursive expression with head.next as the input, so it goes all the way to the end of the linked list
   let end = reverseLinkedListExt(next);
 
-  // because it's coming back up from the recursive call, when it hits the end of the linked list and the base case of head being undefined
-  // head = 4
+  // if it starts out as
   // current = 4
-  // current.next = 5
-  // current.next.next = starts as null, then 4 = current
-  // current.next = 5.next = null
-  let next2 = current.next.next;
-  next2 = current;
+  // current.next =5
+
+  // and then this reassigns 
+  // current.next.next = as 4
+  // that makes 5.next = 4 and reverses it back up
+  // current.next = null makes 5 no longer the next, 4 is and it continues back up 3, 2, 1
+  current.next.next = current;
   current.next = null;
   return end;
 };
