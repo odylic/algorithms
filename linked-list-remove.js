@@ -119,4 +119,4 @@ nodeList.next.next.next.next = new Node("d");
 ll.head = nodeList;
 console.log(ll);
 // console.log(linkedListRemove(ll, 'b'))
-console.log(linkedListRemoveMultiple(ll, "b"));
+// console.log(linkedListRemoveMultiple(ll, "b"));
