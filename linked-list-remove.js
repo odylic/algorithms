@@ -135,6 +135,7 @@ const linkedListRemove = (ll, val) => {
       return ll;
     }
     prev = curr;
+    curr = curr.next;
   }
   return ll;
 };
