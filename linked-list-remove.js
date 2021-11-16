@@ -68,12 +68,12 @@ const linkedListRemoveMultiple = (ll, val) => {
   return ll;
 };
 
-module.exports = {
-  LinkedList,
-  Node,
-  linkedListRemove,
-  linkedListRemoveMultiple,
-};
+// module.exports = {
+//   LinkedList,
+//   Node,
+//   linkedListRemove,
+//   linkedListRemoveMultiple,
+// };
 
 // declare a ll with new LinkedList constructor
 const ll = new LinkedList();
@@ -120,8 +120,9 @@ console.log(ll);
 //   return ll;
 // };
 
+const linkedListRemove = (ll, val) => {
+  return ll;
+};
 
-
-
-// console.log(linkedListRemove(ll, 'b'))
+console.log(linkedListRemove(ll, "b"));
 // console.log(linkedListRemoveMultiple(ll, "b"));
