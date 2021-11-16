@@ -129,7 +129,9 @@ const linkedListRemove = (ll, val) => {
 
   let prev = ll.head;
   let curr = ll.head.next;
+  // while there is a next
   while (curr) {
+    
     if (curr.val === val) {
       prev.next = curr.next;
       return ll;
