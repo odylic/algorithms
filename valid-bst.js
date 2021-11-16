@@ -82,7 +82,7 @@ tree.add(18);
 //   );
 // };
 
-const validBST = (tree, min = -Infinity) => {
+const validBST = (tree, min = -Infinity, max = Infinity) => {
   return tree;
 };
 
