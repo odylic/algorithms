@@ -83,7 +83,7 @@ tree.add(18);
 // };
 
 const validBST = (tree, min = -Infinity, max = Infinity) => {
-  return tree;
+  if (!tree) return true;
 };
 
 console.log(validBST(tree));
