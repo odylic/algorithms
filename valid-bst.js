@@ -66,3 +66,24 @@ BinaryTree.prototype.add = function (value) {
 tree.add(9);
 tree.add(18);
 // console.log(tree);
+
+// // default parameters given -Infinity and Infinity
+// const validBST = (tree, min = -Infinity, max = Infinity) => {
+//   // if null, return true
+//   if (!tree) return true;
+//   // if tree.value < min which gets reassigned in recursive expression
+//   if (tree.value < min || tree.value > max) return false;
+
+//   return (
+//     // recursive call (tree.left = null, min = -Infinity, tree.value is tested)
+//     validBST(tree.left, min, tree.value) &&
+//     // && makes it so both recursive expressions must be true for the total statement to be true, checking if it's a valid BST
+//     validBST(tree.right, tree.value, max)
+//   );
+// };
+
+const validBST = () => {
+  
+}
+
+
