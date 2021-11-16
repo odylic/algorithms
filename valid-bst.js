@@ -47,11 +47,11 @@ tree.left.left = new BinaryTree(3);
 tree.left.right = new BinaryTree(6);
 tree.right = new BinaryTree(14);
 
-          10
-          /\
-         5  14          
-        / \
-       3   6
+      //     10
+      //     /\
+      //    5  14          
+      //   / \
+      //  3   6
        
 
 console.log(tree);
