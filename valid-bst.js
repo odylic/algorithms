@@ -47,12 +47,11 @@ tree.left.left = new BinaryTree(3);
 tree.left.right = new BinaryTree(6);
 tree.right = new BinaryTree(14);
 
-      //     10
-      //     /\
-      //    5  14          
-      //   / \
-      //  3   6
-       
+//     10
+//     /\
+//    5  14
+//   / \
+//  3   6
 
 console.log(tree);
 
@@ -72,7 +71,8 @@ BinaryTree.prototype.add = function (value) {
 };
 tree.add(9);
 tree.add(18);
-// console.log(tree);
+tree.add(12);
+console.log(tree);
 
 // // default parameters given -Infinity and Infinity
 // const validBST = (tree, min = -Infinity, max = Infinity) => {
