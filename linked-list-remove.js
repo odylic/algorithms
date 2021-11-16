@@ -138,7 +138,7 @@ const linkedListRemove = (ll, val) => {
       prev.next = curr.next;
       return ll;
     }
-    
+    // move the pointers along
     prev = curr;
     curr = curr.next;
   }
