@@ -82,10 +82,8 @@ tree.add(18);
 //   );
 // };
 
-const validBST = () => {
+const validBST = (tree) => {
+  return tree;
+};
 
-}
-
-
-console.log(validBST(tree))
-
+console.log(validBST(tree));
