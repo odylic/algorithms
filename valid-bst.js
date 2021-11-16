@@ -85,6 +85,11 @@ tree.add(18);
 const validBST = (tree, min = -Infinity, max = Infinity) => {
   if (!tree) return true;
   if (tree.value < min || tree.value > max) return false;
+
+  return (
+    validBST(tree.left, min, tree.value) &&
+    validBST(tree.right, tree.value, max)
+  );
 };
 
 console.log(validBST(tree));
