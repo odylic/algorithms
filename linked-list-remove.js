@@ -121,6 +121,13 @@ console.log(ll);
 // };
 
 const linkedListRemove = (ll, val) => {
+  // removes
+  if (ll.head.val === val) {
+    ll.head = ll.head.next;
+    return ll;
+  }
+
+  let prev = ll.head;
   return ll;
 };
 
