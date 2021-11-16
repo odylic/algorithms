@@ -25,37 +25,6 @@ function Node(val) {
   this.next = null;
 }
 
-const linkedListRemove = (ll, val) => {
-  // if the head is the value
-  if (ll.head.val === val) {
-    // have this head skipped to the next
-    ll.head = ll.head.next;
-    // return ll
-    return ll;
-  }
-
-  // previous is assigned to head
-  let prev = ll.head;
-  // current is previous.next
-  let curr = ll.head.next;
-
-  // then keep track of the previous with current
-  while (curr) {
-    // if current is the value
-    if (curr.val === val) {
-      // previous.next is reassigned current's next
-      // skips current
-      prev.next = curr.next;
-      // return ll
-      return ll;
-    }
-
-    prev = curr;
-    curr = curr.next;
-  }
-  return ll;
-};
-
 /*
 Extension: 
 * Write a function to delete the first instance of a node in a singly linked list with a space complexity of O(1). 
@@ -120,7 +89,36 @@ ll.head = nodeList;
 
 console.log(ll);
 
+// const linkedListRemove = (ll, val) => {
+//   // if the head is the value
+//   if (ll.head.val === val) {
+//     // have this head skipped to the next
+//     ll.head = ll.head.next;
+//     // return ll
+//     return ll;
+//   }
 
+//   // previous is assigned to head
+//   let prev = ll.head;
+//   // current is previous.next
+//   let curr = ll.head.next;
+
+//   // then keep track of the previous with current
+//   while (curr) {
+//     // if current is the value
+//     if (curr.val === val) {
+//       // previous.next is reassigned current's next
+//       // skips current
+//       prev.next = curr.next;
+//       // return ll
+//       return ll;
+//     }
+
+//     prev = curr;
+//     curr = curr.next;
+//   }
+//   return ll;
+// };
 
 
 
