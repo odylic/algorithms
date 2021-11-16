@@ -74,6 +74,15 @@ tree.add(18);
 tree.add(12);
 console.log(tree);
 
+//     10
+//     /  \
+//    5     14
+//   / \    / \
+//  3   6  12  18
+//        \
+//         9      
+
+
 // // default parameters given -Infinity and Infinity
 // const validBST = (tree, min = -Infinity, max = Infinity) => {
 //   // if null, return true
