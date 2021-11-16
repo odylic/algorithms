@@ -117,7 +117,24 @@ const linkedListRemove = (ll, val) => {
 // };
 
 const linkedListRemoveMultiple = (ll, val) => {
+  // if the head is the val, return ll.head.next to skip ll.head
   if (ll.head.val === val) return ll.head.next;
+  let curNode = ll.head;
+  let nextNode = curNode.next;
+
+
+  while (nextNode) {
+    // if next is the value, remove it by linking the current one to curr.next.next
+    if (nextNode.val === val) {
+      curNode.next = nextNode.next;
+      nextNode = nextNode.next;
+      // else continue the pointers moving along
+    } else {
+      curNode = nextNode;
+      nextNode = nextNode.next;
+    }
+  }
+  return ll;
 };
 
 console.log(linkedListRemoveMultiple(ll, "b"));
