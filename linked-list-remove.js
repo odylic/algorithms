@@ -117,6 +117,7 @@ nodeList.next.next.next = new Node("b");
 nodeList.next.next.next.next = new Node("d");
 // declare the head of ll to nodeList
 ll.head = nodeList;
-console.log(ll);
+
+// console.log(ll);
 // console.log(linkedListRemove(ll, 'b'))
 // console.log(linkedListRemoveMultiple(ll, "b"));
