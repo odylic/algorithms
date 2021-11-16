@@ -41,8 +41,6 @@ Given a linked list:
 
 */
 
-
-
 // module.exports = {
 //   LinkedList,
 //   Node,
@@ -91,32 +89,35 @@ const linkedListRemove = (ll, val) => {
 
 // console.log(linkedListRemove(ll, "b"));
 
+// const linkedListRemoveMultiple = (ll, val) => {
+//   // if head.val is value, return next, skips over first
+//   if (ll.head.val === val) return ll.head.next;
+
+//   // assign current to head
+//   let curNode = ll.head;
+//   // assign next to current.next
+//   let nextNode = curNode.next;
+
+//   // while nextNode is valid
+//   while (nextNode) {
+//     // if nextNode.value is the value
+//     if (nextNode.val === val) {
+//       // current.next is next.next, current is skipped
+//       curNode.next = nextNode.next;
+//       // nextNode is reassigned to next.next
+//       nextNode = nextNode.next;
+//     } else {
+//       // current is next, if not, iterate two pointers by one node
+//       curNode = nextNode;
+//       // next is next.next
+//       nextNode = nextNode.next;
+//     }
+//   }
+//   return ll;
+// };
 
 const linkedListRemoveMultiple = (ll, val) => {
-  // if head.val is value, return next, skips over first
   if (ll.head.val === val) return ll.head.next;
-
-  // assign current to head
-  let curNode = ll.head;
-  // assign next to current.next
-  let nextNode = curNode.next;
-
-  // while nextNode is valid
-  while (nextNode) {
-    // if nextNode.value is the value
-    if (nextNode.val === val) {
-      // current.next is next.next, current is skipped
-      curNode.next = nextNode.next;
-      // nextNode is reassigned to next.next
-      nextNode = nextNode.next;
-    } else {
-      // current is next, if not, iterate two pointers by one node
-      curNode = nextNode;
-      // next is next.next
-      nextNode = nextNode.next;
-    }
-  }
-  return ll;
 };
 
 console.log(linkedListRemoveMultiple(ll, "b"));
