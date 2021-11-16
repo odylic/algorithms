@@ -83,7 +83,9 @@ tree.add(18);
 // };
 
 const validBST = () => {
-  
+
 }
 
+
+console.log(validBST(tree))
 
