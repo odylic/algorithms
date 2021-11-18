@@ -42,7 +42,7 @@ function BinaryTree(value) {
 // module.exports = { BinaryTree, validBST };
 
 const tree = new BinaryTree(10);
-tree.left = new BinaryTree(5);
+tree.left = new BinaryTree(12);
 tree.left.left = new BinaryTree(3);
 tree.left.right = new BinaryTree(6);
 tree.right = new BinaryTree(14);
@@ -80,8 +80,7 @@ console.log(tree);
 //   / \    / \
 //  3   6  12  18
 //        \
-//         9      
-
+//         9
 
 // // default parameters given -Infinity and Infinity
 // const validBST = (tree, min = -Infinity, max = Infinity) => {
