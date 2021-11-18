@@ -53,7 +53,7 @@ tree.right = new BinaryTree(14);
 //   / \
 //  3   6
 
-console.log(tree);
+// console.log(tree);
 
 // don't use arrow functions for 'this' keyword
 BinaryTree.prototype.add = function (value) {
