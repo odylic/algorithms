@@ -49,7 +49,7 @@ tree.right = new BinaryTree(14);
 
 //     10
 //     /\
-//    5  14
+//    12  14
 //   / \
 //  3   6
 
