@@ -54,6 +54,14 @@ Utilizing recursion is not necessary, nor recommended.
 //   return queue;
 // };
 
+// input: root, callback
+// output: the bst with the callback apply in breadthfirst order
+
+const bfs = (root, callback) => {
+  // breadth first search, declare the queue
+  
+};
+
 bst = new BinarySearchTree(4);
 bst.left = new BinarySearchTree(2);
 bst.right = new BinarySearchTree(7);
@@ -64,9 +72,8 @@ bst.right.right.left = new BinarySearchTree(8);
 
 // should be [ 4,2,7,1,3,9,8]
 
-let results = [];
 const cb = (val) => {
-  results.push(val);
+  return val + 1;
 };
 console.log(bfs(bst, cb));
 
