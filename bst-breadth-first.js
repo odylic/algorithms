@@ -135,9 +135,15 @@ neighbors are traversable and haven't already been visited.
 
 */
 
+// const grid = [
+//   [0, 0, 1, 1],
+//   [2, 0, 1, 0],
+//   [1, 0, 0, 0],
+// ];
+
 const grid = [
   [0, 0, 1, 1],
-  [2, 0, 1, 0],
+  [0, 0, 1, 2],
   [1, 0, 0, 0],
 ];
 
@@ -174,7 +180,7 @@ const minimumDistance = (grid) => {
     // check right
     if (j < inner - 1) processPosition(i, j + 1, dist);
   }
-  // if the value 2 is not on the grid, return -1
+  // if the value 2 is not on the grid or cannot be reached, return -1
   return -1;
 };
 
