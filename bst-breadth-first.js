@@ -59,7 +59,15 @@ Utilizing recursion is not necessary, nor recommended.
 
 const bfs = (root, callback) => {
   // breadth first search, declare the queue
-  
+  const queue = [root];
+  while (queue.length) {
+    const node = queue.shift();
+    callback(node.value);
+
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+  return queue;
 };
 
 bst = new BinarySearchTree(4);
@@ -72,10 +80,11 @@ bst.right.right.left = new BinarySearchTree(8);
 
 // should be [ 4,2,7,1,3,9,8]
 
+const result = [];
 const cb = (val) => {
-  return val + 1;
+  result.push(val);
 };
-console.log(bfs(bst, cb));
+// console.log(bfs(bst, cb));
 
 /*
 
@@ -125,6 +134,12 @@ neighbors are traversable and haven't already been visited.
 
 */
 
+const grid = [
+  [0, 0, 1, 1],
+  [2, 0, 1, 0],
+  [1, 0, 0, 0],
+];
+
 const minimumDistance = (grid) => {
   const outer = grid.length;
   const inner = grid[0].length;
@@ -161,5 +176,7 @@ const minimumDistance = (grid) => {
   // if the value 2 is not on the grid, return -1
   return -1;
 };
+
+console.log(minimumDistance(grid));
 
 module.exports = { BinarySearchTree, bfs, minimumDistance };
