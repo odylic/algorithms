@@ -84,6 +84,7 @@ const result = [];
 const cb = (val) => {
   result.push(val);
 };
+// can't get it work based on the given solution
 // console.log(bfs(bst, cb));
 
 /*
