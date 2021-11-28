@@ -35,24 +35,24 @@ Utilizing recursion is not necessary, nor recommended.
 
 */
 
-const bfs = (root, callback) => {
-  // declare queue to the value of the entire document, to an array
-  const queue = [root];
-  // while queue has values
-  while (queue.length) {
-    // declare node as the first element of the array
-    const node = queue.shift();
-    // invoke the callback on node.value which is the first element of the array that was just shifted
-    callback(node.value);
+// const bfs = (root, callback) => {
+//   // declare queue to the value of the entire document, to an array
+//   const queue = [root];
+//   // while queue has values
+//   while (queue.length) {
+//     // declare node as the first element of the array
+//     const node = queue.shift();
+//     // invoke the callback on node.value which is the first element of the array that was just shifted
+//     callback(node.value);
 
-    // if (node.left) exists in the BST, push into the queue
-    if (node.left) queue.push(node.left);
-    // if (node.right) exists in the BST, push into the queue
-    if (node.right) queue.push(node.right);
-    // continue this by level until the while loop finishes
-  }
-  return queue;
-};
+//     // if (node.left) exists in the BST, push into the queue
+//     if (node.left) queue.push(node.left);
+//     // if (node.right) exists in the BST, push into the queue
+//     if (node.right) queue.push(node.right);
+//     // continue this by level until the while loop finishes
+//   }
+//   return queue;
+// };
 
 bst = new BinarySearchTree(4);
 bst.left = new BinarySearchTree(2);
