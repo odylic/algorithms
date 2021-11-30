@@ -173,7 +173,7 @@ const minimumDistance = (grid) => {
 
     // check top
     if (i > 0) processPosition(i - 1, j, dist);
-    // check buttom
+    // check bottom
     if (i < outer - 1) processPosition(i + 1, j, dist);
     // check left
     if (j > 0) processPosition(i, j - 1, dist);
